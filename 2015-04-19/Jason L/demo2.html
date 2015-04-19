@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo2</title>
+</head>
+<body>
+    <script>
+
+    	var Person = function(age) {
+    		this.age = age;
+    	};
+        
+    	Person.prototype = {
+            // _age : undefined,                //4.
+    		get age() {
+                console.log('here is get');  //1.
+                // return this.age;             //3.
+                // return this._age;            //4.
+            },
+            set age(val) {
+                console.log('here is set');  //1.
+                // this.age = val;              //3.
+                // this._age = val;             //4.
+            }
+    	};
+        
+        /*
+        Person.prototype = {
+            age : {
+                get age() {
+                    return this.age;
+                },
+                set age(val) {
+                    this.age = val;
+                }
+            }
+        };
+        
+        */
+    	var p1 = new Person(19);       
+    	var p2 = new Person(23);
+
+    	console.log(p1.age);    //2. 4.
+    	// console.log(p2.age);    //2. 4.
+    	// p1.age = 20;           // 4.
+    	// console.log(p1.age);   //4.
+    	// console.log(p2.age);   // 4.
+
+    	// console.log(p1.hasOwnProperty('age'));     //5.
+    	// console.log(p2.hasOwnProperty('age'));     //5.
+     //    console.log(p1);                         //6.
+     //    console.log(p1.hasOwnProperty('_age'));  //6.
+     //    console.log(p2.hasOwnProperty('_age'));  //6.
+
+        /* 
+            1.
+            不管在什么时候, 访问age属性的时候, 都会运用 get set 方法
+            在实例化的时候也是一样
+        */
+
+        /*
+            2.
+            在实例化的时候的调用了set 方法 但是 set 方法我们只是打印了点东西出来
+            没有真正的给 age 赋值 所以 age 的值为 undefined
+        */
+
+        /*
+            3.
+            因为在 Person.prototype 里没有age这个属性 所以就会出错
+        */
+
+        /*
+            4.
+            因为在get set方法里都访问了 Person.prototype 里的_age属性
+            所以看起来现在一切都好
+        */
+
+        /*
+            5.
+            为什么会这样!!!
+        */
+
+        /*
+            6.
+            是因为在实例化的时候 set 方法把 _age 返回给了实例吗?
+        */
+
+        /*
+            7.
+            那原来的 get set 方法是怎样的
+            回头看看 demo1 的p1
+        */
+
+        /*
+            8.
+            我发现我已经完全不理ppt了
+        */
+    </script>
+</body>
+</html> 

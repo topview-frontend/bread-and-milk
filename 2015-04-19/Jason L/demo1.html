@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+</head>
+<body>
+    <script>
+
+    	var Person = function(age) {
+    		this.age = age;
+    	};
+
+    	Person.prototype = {
+    		getAge : function() {
+    			return this.age;
+    		},
+    		setAge : function(age) {
+    			this.age = age;
+    		}
+    	};
+
+    	var p1 = new Person(19);
+    	var p2 = new Person(23);
+
+    	console.log(p1.age);
+    	console.log(p2.age);
+    	p1.age = 20;
+    	console.log(p1.age);
+    	console.log(p2.age);
+
+    	// console.log(p1.hasOwnProperty('age'));
+    	// console.log(p2.hasOwnProperty('age'));
+
+    	// console.log(p1);
+    </script>
+</body>
+</html>   

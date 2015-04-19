@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo3</title>
+</head>
+<body>
+    <script>
+
+    	var Person = function(age,fullName) {
+    		this.age = age;
+            // this.fullName = fullName;
+    	};
+
+    	Person.prototype = {
+            get birthYear() {
+                return (new Date()).getFullYear() - this.age;
+            },
+            set birthYear(val) {
+                this.age = (new Date()).getFullYear() - val;
+            },
+            // get firstName() {
+            //     var words = this.fullName.split(' ');
+            //     return words[0];
+            // },
+            // set firstName(val) {
+            //     var words = this.fullName.split(' ');
+            //     this.fullName = val + ' ' + words[1];
+            // },
+            // get lastName() {
+            //     var words = this.fullName.split(' ');
+            //     return words[1];
+            // },
+            // set lastName(val) {
+            //     var words = this.fullName.split(' ');
+            //     this.fullName = words[0] + ' ' + val;
+            // }
+            
+    	};
+
+    	var p1 = new Person(19);
+        var p2 = new Person(23);
+
+    	// console.log(p1.age);
+    	console.log(p1.birthYear);
+        console.log(p2.birthYear);
+    	// p1.birthYear = 1994;
+        // console.log(p1.lastName);
+        // p1.lastName = 'Liao';
+        // console.log(p1.lastName);
+        // console.log(p1.fullName);
+    	console.log(p1.hasOwnProperty('age'));
+        console.log(p1.hasOwnProperty('birthYear'));
+        // console.log(p1.hasOwnProperty('lastName'));
+    	console.log(p1);
+
+        /*
+
+            birthYear 属性虽然不是每个实例都有
+            但是因为他的值是根据实例的age属性来的
+            所以可以做到 
+            减少在每个实例里都占有一份内存
+            而且值互不干扰
+            而且构造器里不需要定义太多的属性, 就是实例化的时候,可以传更少的值
+            
+
+            ES6 的新特性
+
+            https://leanpub.com/understandinges6/read
+            https://github.com/lukehoban/es6features
+        */
+    </script>
+</body>
+</html>   
