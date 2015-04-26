@@ -1,0 +1,71 @@
+/*
+Error: Undefined mixin 'container-fixed'.
+        on line 11 of /home/drake/Programming/GitHub/bread-and-milk/2015-04-26/Drake/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss, in `container-fixed'
+        from line 11 of /home/drake/Programming/GitHub/bread-and-milk/2015-04-26/Drake/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss
+
+6: // Container widths
+7: //
+8: // Set the container width, and override it for fixed navbars in media queries.
+9: 
+10: .container {
+11:   @include container-fixed;
+12: 
+13:   @media (min-width: $screen-sm-min) {
+14:     width: $container-sm;
+15:   }
+16:   @media (min-width: $screen-md-min) {
+
+Backtrace:
+/home/drake/Programming/GitHub/bread-and-milk/2015-04-26/Drake/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss:11:in `container-fixed'
+/home/drake/Programming/GitHub/bread-and-milk/2015-04-26/Drake/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss:11
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `with_mixin'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:407:in `run'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/exec/base.rb:52:in `parse'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/lib/sass/exec/base.rb:19:in `parse!'
+/home/drake/.rvm/gems/ruby-2.2.0/gems/sass-3.4.13/bin/sass:13:in `<top (required)>'
+/home/drake/.rvm/gems/ruby-2.2.0/bin/sass:23:in `load'
+/home/drake/.rvm/gems/ruby-2.2.0/bin/sass:23:in `<main>'
+/home/drake/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+/home/drake/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'container-fixed'.\A         on line 11 of /home/drake/Programming/GitHub/bread-and-milk/2015-04-26/Drake/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss, in `container-fixed'\A         from line 11 of /home/drake/Programming/GitHub/bread-and-milk/2015-04-26/Drake/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss\A \A 6: // Container widths\A 7: //\A 8: // Set the container width, and override it for fixed navbars in media queries.\A 9: \A 10: .container {\A 11:   @include container-fixed;\A 12: \A 13:   @media (min-width: $screen-sm-min) {\A 14:     width: $container-sm;\A 15:   }\A 16:   @media (min-width: $screen-md-min) {"; }

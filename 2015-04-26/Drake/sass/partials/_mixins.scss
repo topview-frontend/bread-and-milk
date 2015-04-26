@@ -1,0 +1,56 @@
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin make-row($gutter: $grid-gutter-width) {
+  margin-left: $gutter / -2;
+  margin-right: $gutter / -2;
+}
+
+@mixin make-grid-columns($list: ".col-xs-1, .col-sm-1, .col-md-1 .col-lg-1,") {
+  @for $i from 2 through $grid-columns {
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}"
+  }
+  #{$list} {
+    padding-left: $grid-gutter-width / 2;
+    padding-right: $grid-gutter-width / 2;
+    position: relative;
+    float: left;
+  }
+}
+
+@mixin make-grid($class) {
+  // @include float-grid-columns($class);
+  @include loop-grid-columns($grid-columns, $class, width);
+}
+
+@mixin float-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-#{$class}-#{$i}"
+  }
+  #{$list} {
+    float: left;
+  }
+}
+
+@mixin loop-grid-columns($columns, $class, $type) {
+  @for $i from 0 through $columns {
+    @include calc-grid-column($i, $class, $type)
+  }
+}
+
+@mixin calc-grid-column($index, $class, $type) {
+  @if ($type == width) and ($index > 0) {
+    .col-#{$class}-#{$index} {
+      width: percentage(($index / $grid-columns));
+    }
+  }
+}
+
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
+}
