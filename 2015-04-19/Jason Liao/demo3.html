@@ -7,52 +7,55 @@
 <body>
     <script>
 
-    	var Person = function(age,fullName) {
-    		this.age = age;
-            // this.fullName = fullName;
+    	var Person = function(fullName) {
+    		// this.age = age;
+            this.fullName = fullName;
+            // this.birthYear = birthYear;
     	};
 
     	Person.prototype = {
-            get birthYear() {
-                return (new Date()).getFullYear() - this.age;
+
+            // get birthYear() {
+            //     return (new Date()).getFullYear() - this.age;
+            // },
+            // set birthYear(val) {
+            //     this.age = (new Date()).getFullYear() - val;
+            // },
+            get firstName() {
+                var words = this.fullName.split(' ');
+                return words[0];
             },
-            set birthYear(val) {
-                this.age = (new Date()).getFullYear() - val;
+            set firstName(val) {
+                var words = this.fullName.split(' ');
+                this.fullName = val + ' ' + words[1];
             },
-            // get firstName() {
-            //     var words = this.fullName.split(' ');
-            //     return words[0];
-            // },
-            // set firstName(val) {
-            //     var words = this.fullName.split(' ');
-            //     this.fullName = val + ' ' + words[1];
-            // },
-            // get lastName() {
-            //     var words = this.fullName.split(' ');
-            //     return words[1];
-            // },
-            // set lastName(val) {
-            //     var words = this.fullName.split(' ');
-            //     this.fullName = words[0] + ' ' + val;
-            // }
+            get lastName() {
+                var words = this.fullName.split(' ');
+                return words[1];
+            },
+            set lastName(val) {
+                var words = this.fullName.split(' ');
+                this.fullName = words[0] + ' ' + val;
+            }
             
     	};
 
-    	var p1 = new Person(19);
-        var p2 = new Person(23);
+    	var p1 = new Person('zhangjie luo');
+        // var p2 = new Person(23,1992);
 
     	// console.log(p1.age);
-    	console.log(p1.birthYear);
-        console.log(p2.birthYear);
+    	// console.log(p1.birthYear);
+     //    console.log(p2.birthYear);
     	// p1.birthYear = 1994;
-        // console.log(p1.lastName);
+     //    console.log(p1.age);
         // p1.lastName = 'Liao';
         // console.log(p1.lastName);
+        // p1.lastName = 'liao';
         // console.log(p1.fullName);
-    	console.log(p1.hasOwnProperty('age'));
-        console.log(p1.hasOwnProperty('birthYear'));
+    	// console.log(p1.hasOwnProperty('age'));
+     //    console.log(p1.hasOwnProperty('birthYear'));
         // console.log(p1.hasOwnProperty('lastName'));
-    	console.log(p1);
+    	// console.log(p1);
 
         /*
 

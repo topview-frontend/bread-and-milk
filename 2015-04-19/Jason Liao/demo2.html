@@ -13,16 +13,16 @@
         
     	Person.prototype = {
             // _age : undefined,                //4.
-    		get age() {
-                console.log('here is get');  //1.
-                // return this.age;             //3.
-                // return this._age;            //4.
-            },
-            set age(val) {
-                console.log('here is set');  //1.
-                // this.age = val;              //3.
-                // this._age = val;             //4.
-            }
+    		// get age() {
+      //           // console.log('here is get');  //1.
+      //           return this.age;             //3.
+      //           // return this._age;            //4.
+      //       },
+      //       set age(val) { 
+      //           // console.log('here is set');  //1.
+      //           this.age = val;              //3.
+      //           // this._age = val;             //4.
+      //       },
     	};
         
         /*
@@ -36,20 +36,20 @@
                 }
             }
         };
-        
         */
+        
     	var p1 = new Person(19);       
     	var p2 = new Person(23);
 
     	console.log(p1.age);    //2. 4.
-    	// console.log(p2.age);    //2. 4.
-    	// p1.age = 20;           // 4.
-    	// console.log(p1.age);   //4.
-    	// console.log(p2.age);   // 4.
+    	console.log(p2.age);    //2. 4.
+    	p1.age = 20;           // 4.
+    	console.log(p1.age);   //4.
+    	console.log(p2.age);   // 4.
 
-    	// console.log(p1.hasOwnProperty('age'));     //5.
+    	// console.log(p1.hasOwnProperty('name'));     //5.
     	// console.log(p2.hasOwnProperty('age'));     //5.
-     //    console.log(p1);                         //6.
+        // console.log(p1);                         //6.
      //    console.log(p1.hasOwnProperty('_age'));  //6.
      //    console.log(p2.hasOwnProperty('_age'));  //6.
 
