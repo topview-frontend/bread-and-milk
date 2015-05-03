@@ -5,7 +5,7 @@ Topview大前端每周内部交流会 :ghost:
 ### 2015-05-03
 
 - Hi, I'm totally new to Node.js - **[Jason Liao](https://github.com/L-movingon)**
-
+- Learning gulp.js - **[Drake Leung](https://github.com/DrakeLeung)**
 
 ### 2015-04-26
 
