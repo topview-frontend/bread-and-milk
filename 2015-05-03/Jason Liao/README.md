@@ -46,7 +46,8 @@ net.createServer(function(client) {
   //client 是连接到这个端口的 socket 的一个实例
   //为每个实例一个id 后面会用到
   var id  = client.remoteAddress + ':' + client.remotePort;
-}).listen(3000);```
+}).listen(3000);
+```
 
 当多个dos连接到同一个服务器的时候一起聊天时，我们可以认为他们处于同一个频道下，而这个频道就要来监听每个dos的操作，还要对每个dos进行显示
 
