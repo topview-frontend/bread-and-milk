@@ -2,6 +2,11 @@
 
 Topview大前端每周内部交流会 :ghost:
 
+### 2015-05-12
+
+- 一个阶段的结束是另一个阶段的开始 - **[Tim Tsang](https://github.com/TimTsang)**
+- [3、4月学习总结，如愿阿里前端实习生](http://www.cnblogs.com/0603ljx/p/4442834.html) - **[floraLam](https://github.com/floraLam)**
+
 ### 2015-05-03
 
 - Hi, I'm totally new to Node.js - **[Jason Liao](https://github.com/L-movingon)**
