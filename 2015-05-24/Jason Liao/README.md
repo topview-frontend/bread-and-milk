@@ -128,6 +128,3 @@ var str = 'A rather long string of English text, an error message ' +
 - 函数名末尾和左括号之间留一空格
 - 函数右括号与大括号之间留一空格
 - if语句else语句后留一空格
-
-## Summary
-
