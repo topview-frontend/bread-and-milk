@@ -2,6 +2,11 @@
 
 Topview大前端每周内部交流会 :ghost:
 
+### 2015-05-24
+
+- 初学者常见问题解决方案 - **[Chess Zhang](https://github.com/zhanyuzhang)
+- Editor and Style Guide - **[Jason Liao](https://github.com/L-movingon)**
+
 ### 2015-05-11
 
 - 一个阶段的结束是另一个阶段的开始 - **[Tim Tsang](https://github.com/TimTsang)**

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注意代码的执行问题</title>
+		
+	</head>
+	<body>
+		<div id="div1">我是div1</div>
+		<!--方法二：放到body的最后-->
+		<script>
+				
+
+				
+					var div1 = document.getElementById("div1");
+					alert(div1.innerHTML);
+			
+
+				//方法一：把这些操作放到onload函数里面去；
+			
+		</script>
+	</body>
+</html>
