@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet" href="style.css")
+  body
+    h1= title
+    ul
+      each item in items
+        li= item.todo
+
+    form(method="POST" action="/add")
+      input(name="newItem")
+      input(type="submit")
