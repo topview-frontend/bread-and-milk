@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>可以进行函数的连缀调用操作</title>
+	<style>
+		#test{
+			height:200px;
+			text-align:center;
+			line-height:200px;
+			background:#ccc;
+			font-size:24px;
+		}
+	</style>
+	<script src="../jslib/jquery-2.0.3.js"></script>
+	<script>
+		$(function(){
+			$("#test").css("color","red").css("color","red").slideUp(3000);
+			//首先调用了css函数使颜色变红，
+			//随后又调用了slideUp函数将其进行隐藏
+		});
+
+	</script>
+</head>
+<body>	
+	<div id="test">
+		Hello World
+	</div>
+</body>
+</html>

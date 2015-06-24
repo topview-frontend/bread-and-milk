@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>具有集合处理功能</title>
+	<script src="../jslib/jquery-2.0.3.js"></script>
+	<script>
+		$(function() {
+			$("ul li").css("border","green dashed 1px");
+			//$("ul li")得到的是5个li的对象数组
+			//可以直接对该数组进行操作
+			//所以所有的li标签都被添加上了边框
+		});
+	</script>
+</head>
+<body>	
+	<ul>
+		<li>one</li>
+		<li>two</li>
+		<li>three</li>
+		<li>four</li>
+		<li>five</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>视差滚动</title>
+</head>
+<style>
+body {
+	font: middle '微软雅黑';
+}
+#article1,#article2 {
+	width: 75%;
+	margin: 0 auto;
+	height: 800px;
+	padding: 5%;
+	background: url(back.jpg) center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+#something {
+	width: 75%;
+	margin: 0 auto;
+	text-align: center;
+}
+.title{
+	position: relative;
+	top: -30%;
+	color: rgb(185,147,196);
+}
+.content{
+	position: relative;
+	top: 35%;
+	left: 200%;
+	color: rgb(200,200,200);
+}
+
+.title-anim{
+	top: 30%;
+	transition: all 1s; //平缓过度
+}
+.content-anim{
+	left: 0px;
+	transition: all 1s;
+}
+
+</style>
+
+<body>
+	<div id="article1">
+		<div class="title" id="title1">
+			<h2>share·视差滚动·by Dcc</h2>
+		</div>
+		<div class="content" id="content1">
+			<p>视差滚动，就是在页面滚动过程中，多层次的元素进行不同程度的位移，带来立体的视差效果,实现方法多种多样</p>
+		</div>
+	</div>
+
+	<div id="something">
+			<h2>视差滚动·解说</h2>
+			<p>本页面的视差滚动用到的核心知识是一个CSS属性 background-attachment</p>
+			<p>scroll : 默认值，背景图像会随着页面其余部分的滚动而移动</p>
+			<p>fixed : 当其他部分移动，背景图像不移动</p>
+			<p>inherit : 从父元素继承</p>
+	</div>
+
+	<div id="article2">
+		<div class="title" id="title2">
+			<h2>视差滚动·其他</h2>
+		</div>
+		<div class="content" id="content2">
+			<p>本网页的实现视差滚动所用的方法比较简单粗暴,还有一些其他的东西</p>
+			<p>下面来看CSS3的动画效果，实现方法是靠JS的增加类覆盖掉前面的东西</p>
+			<p>里面有一个transition属性，平缓过度到这个位置</p>
+			<p>下面来讲一下JS中用到的东西：在CSS3的动画里头，我用了JS的侦听，滚动到页面某个值后会触发一个CSS3动画让其对滚动条的滚动进行反应。window.addEventListener<br>
+			原型public override function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void【见add.txt】</p>
+		</div>
+	</div>
+
+<script>
+	var articleHeight = document.getElementById('article1').clientHeight;//内容高度
+	var title1 = document.getElementById('title1'),
+		title2 = document.getElementById('title2');
+	var content1 = document.getElementById('content1'),
+		content3 = document.getElementById('content2');
+
+	window.addEventListener('scroll',scrollHandler);
+
+	function scrollHandler(e){
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;//获取滚动条距离
+		if(scrollTop > 0 && scrollTop < articleHeight){
+			title1.classList.add('title-anim');//元素类名进行增加
+			content1.classList.add('content-anim');
+		}else if(scrollTop >= articleHeight && scrollTop < articleHeight*2){
+			title2.classList.add('title-anim');
+			content2.classList.add('content-anim');
+		}
+	}
+</script>
+
+</body>
+</html>

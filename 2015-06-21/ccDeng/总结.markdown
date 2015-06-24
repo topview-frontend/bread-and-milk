@@ -1,0 +1,8 @@
+#background-attachment
+css属性可让背景不随滚动条滚动
+#transition
+可以平缓过度，做出类似动画效果
+#JS增加类名实现覆盖
+加上平缓过度可实现多种动画效果
+#addEventListener()
+JS中的侦听事件方法，具体可看[add.txt]

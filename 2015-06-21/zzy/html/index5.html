@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用each函数实现数组或者对象的遍历</title>
+	<script src="../jslib/jquery-2.0.3.js"></script>
+	<script>
+		$(function() {
+			$("ul li").each(function(){
+				alert($(this).html());
+				//遍历了5个li
+				//并且获取他们的内容
+			});
+		});
+	</script>
+</head>
+<body>	
+	<ul>
+		<li>one</li>
+		<li>two</li>
+		<li>three</li>
+		<li>four</li>
+		<li>five</li>
+	</ul>
+</body>
+</html>\

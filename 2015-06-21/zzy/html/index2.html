@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>同一函数实现get和set功能</title>
+	<script src="../jslib/jquery-2.0.3.js"></script>
+	<script>
+		$(function(){
+
+			//情形一：
+			
+			/*
+			//传参数，则是赋值
+			$("#test").html("hello jQuery!")//把Hello World改成hello jQuery!
+			//不传参数则是取值
+			alert($("#test").html());
+			*/
+		
+			//情形二：			
+			//传两个参数则是赋值,把指定元素的前景色改成红色
+			$("#test").css("color","red");
+			//传一个参数则是取值，获取指定元素的前景色
+			alert($("#test").css("color"));
+		
+
+
+
+		});
+
+	</script>
+</head>
+<body>	
+	<div id="test" style="font-size:24px;">Hello World</div>
+</body>
+</html>

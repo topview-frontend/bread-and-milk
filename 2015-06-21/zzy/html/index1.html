@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index1-ready函数的用法</title>
+	<style>
+		#test{
+			height:200px;
+			text-align:center;
+			line-height:200px;
+			background:#ccc;
+			font-size:24px;
+		}
+	</style>
+	<script src="../jslib/jquery-2.0.3.js"></script>
+	<script>
+
+		//完整的写法
+		$(document).ready(function() {
+			$("#test").fadeOut(3000);//3秒钟的渐隐直至消失
+		});
+
+		//简写
+		$(function() {
+			$("#test").fadeIn(3000);//3秒钟的渐现
+		});
+	</script>
+</head>
+<body>	
+	<div id="test">
+		Hello World
+	</div>
+</body>
+</html>
