@@ -2,6 +2,17 @@
 
 Topview大前端每周内部交流会 :ghost:
 
+### 2015-06-21
+- 轮播 - **[bbchen](https://github.com/JoeBBChen)**
+- `background-attachment`, `transition`... - **[ccDeng](https://github.com/ccDeng)**
+- CSS3 2D转换和动画属性 - **[selinaYu](https://github.com/SelinaYu)**
+- Getting start jQuery - **[zzy](https://github.com/zhanyuzhang)**
+
+
+### 2015-06-14
+- GitHub tutorial - **[Drake Leung](https://github.com/DrakeLeung)**
+- What's next? - - **[Jason Liao](https://github.com/L-movingon)**
+
 ### 2015-06-07
 
 - Don't use THIS again - **[Drake Leung](https://github.com/DrakeLeung)**
